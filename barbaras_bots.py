@@ -2,11 +2,9 @@ import os
 import telebot
 from telebot import types
 
-# Ņem tokenu no Render Environment Variable
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-
 if not BOT_TOKEN:
-    print("KĻŪDA: Nav BOT_TOKEN! Uzliec Renderā Environment Variables")
+    print("KĻŪDA: Nav BOT_TOKEN")
     exit(1)
 
 bot = telebot.TeleBot(BOT_TOKEN)
